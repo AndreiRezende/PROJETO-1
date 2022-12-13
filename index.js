@@ -57,41 +57,12 @@ app.get('/conselhos', async(req, res) => {
     await Conselhos.find(req, res)
 })
 
-
-
-
-
 // const andrei = new User({email: 'andreiono@hotmail.com', password: '2547'})
 // andrei.save().then( () => {
 //     console.log('salvou')
 // })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Ouvindo na porta 3000')
 })
 
