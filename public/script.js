@@ -77,7 +77,7 @@ botaoEntrar.addEventListener('click', async () =>{
         password: password.value,
         }
         
-    let data = await (fetch('http://localhost:3000/login', {
+    let data = await (fetch('https://evening-island-13033.herokuapp.com/login', {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -142,7 +142,7 @@ botaoBuscar.addEventListener('click', () => {
     let keyword = keyWord.value
     if(keyword){
     if(sessionStorage.token){
-        fetch('http://localhost:3000/conselhos?'+ new URLSearchParams({keyWord: keyword}))
+        fetch('https://evening-island-13033.herokuapp.com/conselhos?'+ new URLSearchParams({keyWord: keyword}))
         .then(resp => {
             console.log(resp)
             return resp.json();
@@ -197,7 +197,7 @@ botaoPostar.addEventListener('click', async () =>{
         conselho: conteudoConselho.value,
         token: sessionStorage.token
         }
-    await fetch('http://localhost:3000/conselhos', {
+    await fetch('https://evening-island-13033.herokuapp.com/conselhos', {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
